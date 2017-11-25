@@ -1,0 +1,161 @@
+.header {
+	height: 11%;
+	min-height: 79px;
+
+	text-align: justify;
+	text-align-last: justify;
+	-moz-text-align-last: justify;
+
+	background: #fff;
+	@include box-shadow(0 1px 3px 0 rgba(#000, .2));
+	line-height: 79px; 
+}
+
+.header__left, .header__right {
+	display: inline-block;
+
+}
+
+.user {
+	text-align: left;	
+}
+
+.user__avatar,
+.user__name {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.user__avatar {
+	width: 60px;
+	height: 60px;
+	border: 1px solid #d7d7d7;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 15px 0 0;
+}
+
+.user__img {
+	max-width: 100%;
+}
+
+.user__name {
+	color: #414141;
+	font: 400 1.125rem  FiraSans, sans-serif;
+}
+
+.header__right {
+	text-align: right; 
+}
+
+.contacts {
+	position: relative;
+	display: inline-block;
+
+	&:hover,
+	&:focus {
+		.contacts__link {
+			color: $red;
+		}
+		.contacts__list {
+			display: block;
+		}
+	}
+	
+	@include phones {
+		color: $blue;
+		&:hover,
+		&:focus {
+			color: $red;			
+		}	
+		&:before {
+			display: inline-block;
+			vertical-align: middle;
+			width: 32px;
+			height: 32px;	
+			line-height: 79px;
+			font: 400 32px FontAwesome;
+			content: "\f095";						
+		}		
+	}
+}
+
+.contacts__link {
+	color: $blue;
+	font: 700 rem(18px) FiraSans, sans-serif;
+	text-decoration: none;
+	border-bottom: 1px dashed;
+	transition: color 0.5s ease .0s;
+
+	@include phones {
+		display: none;
+	}
+}
+
+.contacts__list {
+	display: none;
+	width: 11.5rem;
+	position: absolute;
+	right: -20%;
+	top: 80%;
+	z-index: 5;
+	box-sizing: content-box;
+	@include laptop {
+		right: 0;
+	}
+	@include phones {
+		right: -10px;
+	}
+
+   	border: 1px solid #dedede;
+	border-radius: 5px;
+	background-color: #fff;
+	text-align-last: left;
+
+	&:before, &:after {
+    	content: ''; 
+    	position: absolute;
+    	left: 46%; top: -20px;
+    	@include phones {
+			left: 75%; 
+		}
+    	border: 10px solid transparent;
+    	border-bottom: 10px solid #dedede;
+	}
+
+	&:after {
+    	border-bottom: 10px solid white;
+    	top: -19px; 
+	}
+}
+
+.contacts__item {
+	line-height: 40px;
+	border-bottom: 1px solid #dedede;
+	padding: 0 rem(16px);
+	&:last-child {
+		border-bottom: none;
+	}
+
+	i {
+		vertical-align: middle;
+	}
+}
+
+.contacts__item-link {
+	color: #414141;
+	font: 300 rem(16px) FiraSans, sans-serif;
+	text-decoration: none;
+	vertical-align: middle;
+	transition: color 0.4s ease .0s;
+	&:hover {
+		color: $blue;
+	}
+}
+
+.fa-envelope,
+.fa-phone,
+.fa-skype {
+	color: $blue;
+}

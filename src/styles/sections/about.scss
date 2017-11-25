@@ -1,0 +1,86 @@
+.about {
+	@extend %right-content;
+}
+
+.about__left,
+.about__right {
+	display: inline-block;
+	vertical-align: top;
+	@include phones {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.about__left {
+	width: 220px;
+	height: 220px;
+	-webkit-transition: all .3s ease-out 0s;
+    -moz-transition: all .3s ease-out 0s;
+    -o-transition:all .3s ease-out 0s;
+   	transition: all .3s ease-out 0s;
+	@include laptop {
+		width: rem(200px);
+		max-width: 22vw;
+		height: rem(200px);
+		max-height: 22vw;		
+	}
+	@include tablets {
+		min-width: rem(165px);
+		min-height: rem(165px);
+		width: rem(192px);
+		height: rem(192px);
+	}
+	@include phones {
+		max-width: none;
+		max-height: none;
+		margin: 0 auto 15px;
+	}	
+	border: rem(5px) solid #fff;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.about__img {
+	display: block;
+	width: 100%;
+}
+
+.about__right {
+	float: right;
+	width: 55%; 
+	text-align: left;
+	@include phones {	
+		width: 100%;	
+	}
+}
+
+
+.about__description {
+	width: 100%;
+	height: rem(280px);
+	overflow: auto;
+	margin: 0 auto rem(20px);
+	p {
+		margin: 0 auto rem(10px);
+		color: #646464;
+		font: 300 rem(18px)  FiraSans, sans-serif;
+	}	
+	@include phones {
+		height: auto;
+	}
+}
+
+.about__btns {	
+	text-align: right;
+	@include phones {
+		text-align: center;
+	}
+}
+
+.mCSB_dragger_bar {
+	background: lighten($blue, 15%)!important;
+}
+.mCSB_scrollTools .mCSB_draggerRail {
+	background: lightgrey!important;
+}

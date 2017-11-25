@@ -1,0 +1,105 @@
+.sidebar {
+	width: 24%;
+	transition: all .5s ease 0s;
+	-webkit-transition: all .5s ease 0s;
+    -moz-transition: all .5s ease 0s;
+    -o-transition: all  .5s ease 0s;
+	float: left;
+
+	@include tablets {
+		width: 100%;
+		float: none;
+		margin: 0 0 rem(35px);
+	}
+	@include phones {		
+		margin: 0 0 18px;
+	}
+}
+
+.nav__list {
+	text-align: right;
+	
+	@include tablets {
+		text-align: center;
+	}
+}
+
+.nav__item {
+	line-height: rem(44px);
+	border-right: rem(6px) solid transparent;
+	@include tablets {
+		display: inline-block;		
+		border: none;
+		margin: 0 28px 0 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	@include phones {
+		line-height: normal;
+		margin: 0 15px 0 0;
+	}
+}
+
+.nav__item_active {
+	@extend .nav__item;
+	border-color: $blue;
+	.nav__link {
+		color: $blue;
+	}
+}
+
+.nav__link {
+	padding: rem(12px) rem(24px) rem(12px) 0;
+	text-decoration: none;
+	color: #414141;
+	font: 400 18px FiraSans, sans-serif;
+	transition: color 0.5s ease .0s;
+	&:hover {
+		color: $blue;
+	}
+
+	@include tablets {
+		padding: rem(12px) 0;
+	}
+
+	@include phones {
+		max-height: 15px;
+		padding: 0;
+		font-size: 1rem;
+
+	}
+}
+
+.nav__link_female {
+	&:before {
+		font-family: 'FontAwesome';
+		content: "\f182";
+	}
+}
+
+.nav__link_rocket {
+	&:before {
+		font-family: 'FontAwesome';
+		content: "\f135";
+	}
+}
+
+.nav__link_briefcase {
+	&:before {
+		font-family: 'FontAwesome';
+		content: "\f0b1";
+	}
+}
+
+.nav__link_female,
+.nav__link_rocket,
+.nav__link_briefcase {
+	@include phones {
+		&:before {
+			content: "";
+			display: none;
+		}
+	}
+}
+

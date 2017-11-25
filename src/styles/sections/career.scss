@@ -1,0 +1,153 @@
+.career {
+	@extend %right-content;
+   	transition: all  .6s ease-out 0s;
+}
+
+.career__wrap {
+	text-align: center;
+	@extend %clearfix;
+	@include tablets {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+.career__left {
+	width: 33%;
+	float: left;
+	padding: 0 5px;
+}
+
+.career__pics {
+	max-width: 220px;
+	height: 100%;
+	overflow: hidden;
+	border-radius: rem(9px);
+	@include phones {
+		margin: 0 auto;
+	}
+}
+
+.career__right {
+	width: 67%;
+	float: right;
+	text-align: left;
+	padding: 0 5px;	
+}
+	
+.career__left, 
+.career__right {	
+	@include phones {
+		padding: 20px 0 0;
+		width: 100%;
+		float: none;
+	}
+}
+
+.career__item {	
+	margin: 0 0 rem(18px);	
+}
+
+.career__item:first-child { 
+	.career__block:before {
+		display: none;
+		}
+}
+.career__item:last-child { 
+	.career__block:after {
+		display: none;
+	}
+}
+
+
+$circle-width: 10px;
+$shadow-width: 4px;
+
+.career__block {
+	position: relative;
+	display: block;
+	color: #414141;
+	font: 400 16px FiraSans, sans-serif;
+	text-decoration: none;
+	&:before, &:after {
+		position: absolute;z-index: 1;
+		content: "";
+		display: block;
+		width: 1px;
+		background: #ddd;
+		left: 18%;
+		margin-left: -($circle-width/2 + $shadow-width);
+		@include phones {
+			display: none;
+		}
+	}
+	&:before {
+		top: 0;
+		bottom: 50%;
+		margin-bottom: $circle-width/2 + $shadow-width;
+	}
+	&:after {
+		bottom: rem(-18px);
+		top: 50%;
+		margin-top: $circle-width/2 + $shadow-width;
+	}
+	&:hover {		
+		.career__year {
+			color: $blue;
+			font-size: rem(18px); 
+			font-weight: bold;
+			transition: all 0.6s ease .0s;
+			&:after {
+				box-shadow: 0 0 0 $shadow-width #94e0f2;
+				transition: box-shadow 0.5s ease .0s;
+			}
+		}
+		.career__description {				
+			background-color: $blue;
+			transition: background-color 0.5s ease .0s;
+		}		
+	}
+	@include phones {
+		text-align: center;
+	}
+}
+
+.career__year {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	width: 18%;
+	padding: 0 ($circle-width + 2*$shadow-width) 0 0;
+	text-align: center;
+	color: #727272;
+	font-size: 15px;
+	&:after {
+		position: absolute; z-index: 2;
+		content: "";
+		width: $circle-width;
+		height: $circle-width;
+		right: $shadow-width;
+		top: 50%;
+		margin: -$circle-width/2 0 0;
+		background-color: $blue;
+		border-radius: 50%;
+		box-sizing: border-box;	
+	}
+	@include phones {
+			display: none;
+	}
+}
+
+.career__description {
+	display: inline-block;
+	vertical-align: middle;
+	width: 80%;
+	padding: rem(18px) rem(20px) rem(16px);
+	border-radius: rem(10px);
+	box-shadow: 0px 1px 3px 0px #ccc;
+	background-color: #fff;
+}
+
+.career__title {
+	font-size: 20px;
+}

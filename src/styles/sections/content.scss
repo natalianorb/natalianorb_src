@@ -1,0 +1,36 @@
+.content {
+	padding-top: rem(28px);
+}
+
+.title {	
+	text-align: left;
+	margin: 0 auto rem(15px);
+	padding: 0 0 0 1%;
+	color: #414141;
+	font: 500 35px FiraSans, sans-serif;
+	@include tablets {
+		margin: 0 auto 22px;
+	}
+	@include phones {
+		text-align: center;
+		margin: 0 auto 15px;
+	}
+}
+
+%right-content {
+	float: right;
+	width: 76%;	
+	padding: 0 0 0 10px;
+	@include tablets {
+		float: none;
+		width: 100%;
+	}
+	@include phones {
+		text-align: center;
+	}
+}
+
+.fa-mobile,
+.fa-desktop {
+	font: 400 rem(16px) FontAwesome;
+}

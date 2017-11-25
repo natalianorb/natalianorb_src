@@ -1,0 +1,74 @@
+.footer {	
+	width: 100%;
+	height: $footer-height;
+	position: absolute;
+	bottom: 0;	
+	background: #414141;
+
+	@include phones {
+		height: 114px;
+		padding: 15px 0;
+	}
+}
+
+.footer__left {
+	float: left;
+	width: 76%;
+	@include phones {
+		float: none;
+		width: 100%;
+		margin: 0  0 10px 0;
+	}
+}
+
+.copyright {
+	text-align: left;
+	color: #9c9c9c;
+	font: 300 rem(16px) FiraSans, sans-serif;
+	line-height: $footer-height;
+	@include phones {
+		text-align: center;	
+		line-height: 21px;
+	}
+}
+
+.footer__right {
+	display: inline-block;
+	width: 24%;
+	@include phones {
+		width: 90%;
+	}
+}
+
+.socials {
+	text-align: right;
+	line-height: $footer-height;
+	@include phones {
+		text-align: center;
+	}
+}
+
+.socials__item {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.socials__link {	
+	display: block;
+	width: 30px;
+	height: 30px;
+	text-decoration: none;
+	color: transparent;
+}
+
+@each $social in (vk, fb, tw) {
+	.socials__link_#{$social} { 
+		background: url(../images/#{$social}.png) 0 0 no-repeat;
+		background-size: 30px;
+	}
+	
+	.socials__link_#{$social}:hover {
+		background: url(../images/#{$social}_hover.png) 0 0 no-repeat;
+		background-size: 30px;
+	}
+}

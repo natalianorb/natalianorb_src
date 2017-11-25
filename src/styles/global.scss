@@ -1,0 +1,133 @@
+//vars
+$white: #f6f6f6;
+$blue: #33c1e3;
+$red: #e85f61;
+
+
+$container-width: 60rem;
+$footer-height: 50px;
+
+//layout
+@import "misc/normalize";
+@import "mixins.scss";
+@import "font-awesome";
+
+//styles
+@import "sections/index";
+@import "sections/header";
+@import "sections/sidebar";
+@import "sections/content";
+@import "sections/footer";
+@import "sections/about";
+@import "sections/career";
+@import "sections/portfolio";
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+html {	
+	@include desktop {
+  		font-size: 16px;
+  	}
+  	@include laptop {
+  		font-size: 15px;
+  	}
+  	@include tablets {
+  		font-size: 14px;
+  	}
+}
+
+body {
+	line-height: 1.42;
+	-webkit-font-smoothing: antialiased;
+	background-color: $white;
+	text-align: center;	
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	font-weight: normal;
+}
+
+.wrapper {
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0;
+    &:after {
+		content: "";
+		display: block;
+		height: $footer-height;
+		@include phones {
+			height: 114px;
+		}
+	}	
+}
+
+.maincontent {
+	margin: 0 0 rem(25px);
+} 
+
+.container {
+	@extend %clearfix;
+	width: 960px;
+	margin: 0 auto;
+	padding: 0 10px;
+
+	-webkit-transition: all  .5s ease 0s;
+    -moz-transition: all  .5s ease 0s;
+    -o-transition: all  .5s ease 0s;
+   	transition: all  .5s ease 0s;
+	@include laptop { 
+		max-width: 96%;
+	}
+	@include tablets {
+		max-width: 100%;
+	}
+}
+
+.btn {  	
+	display: inline-block;
+	padding: rem(4px) rem(15px); 
+	color: $red;
+	border: 2px solid;
+	border-radius: rem(20px); 	
+	text-decoration: none;
+	font: bold rem(14px) FiraSans, sans-serif;
+	line-height: 2;	
+}
+
+.btn:hover {
+	color: #fff;	
+	background-color: $red;
+	border-color: $red;
+	transition: background 0.5s ease .0s;
+}
+
+.btn_white {
+	color: #fff;
+	
+	&:hover {
+		background-color: #f6f6f6;
+		color: $blue;
+		border-color: #fff;
+	}
+}
+
+.fa {
+	font: 400 rem(18px) FontAwesome;
+}
