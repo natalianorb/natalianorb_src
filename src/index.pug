@@ -1,0 +1,17 @@
+doctype html
+html
+    include includes/_head.pug
+    +head('Главная')
+    body
+        <!--[if lt IE9]>
+            p Ваш браузер устарел. Пожалуйста,
+                a(href='http://browsehappy.com/') обновите
+        <![endif]-->
+        div.wrap
+            div.container-indx
+                div.container-indx__avatar
+                    img(class='container-indx__img' src='images/avatar138px.jpg')
+                div.container-indx__bg
+                    div.container-indx__name Наталья Норбоева
+                    div.container-indx__rectangle
+                        a.btn.btn_white(href='./about.html') Перейти на сайт

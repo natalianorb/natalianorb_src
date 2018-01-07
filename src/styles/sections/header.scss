@@ -95,7 +95,6 @@
 
 .contacts__list {
 	display: none;
-	width: 11.5rem;
 	position: absolute;
 	right: -20%;
 	top: 80%;
@@ -134,6 +133,7 @@
 	line-height: 40px;
 	border-bottom: 1px solid #dedede;
 	padding: 0 rem(16px);
+	white-space: nowrap;
 	&:last-child {
 		border-bottom: none;
 	}

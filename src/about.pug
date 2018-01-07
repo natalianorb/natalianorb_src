@@ -1,0 +1,27 @@
+doctype html
+html
+	include includes/_head.pug
+	+head('Обо мне')
+	body
+	div.wrapper
+		div.maincontent
+			include includes/_header.pug
+			div.content
+				div.container
+					include includes/_sidebar.pug
+					main.about
+						div.about__left
+							img.about__img(src='../images/avatar220px.')
+						div.about__right
+							h1.title Обо мне
+							div.about__description
+								p Привет! Меня зовут Наталья Норбоева.
+								p Хотя я училась на переводчика китайского языка, меня всегда интересовало программирование. В апреле 2016 было решено начать с малого - верстки - чтобы иметь возможность как можно быстрее влиться в сферу. Долго сравнивая различные онлайн курсы, выбрала Loftshool. На курсах благополучно освоила семантичную, адаптивную, кроссбраузерную верстку с применением Sass, BEM и Gulp, и даже основы javascript'а, который мне очень понравился. Простые скрипты могу и сама написать, но этого мне мало.
+								p С сентября работаю удаленно, не фриланс. Свободное время провожу с 2 del>бандитами/del> детьми, а всё остальное время развиваюсь: прохожу/просматриваю бесплатные онлайн курсы, читаю учебник, однако не хватает фидбека по написанным работам. В 2017 году планирую прилично подтянуть JS, чтобы уметь решать более сложные задачи. В целом, хочу дорасти до уровня Senior, а это значит, что меня ждет длинный и интересный путь:)
+							div.about__btns
+								a.btn(href='http://hh.ru/resume/b2c34145ff01f962e70039ed1f555069334b66') Посмотреть резюме
+		include includes/_footer.pug
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js/script')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js/script')
+	script(src='./js/customScrollbar.js')
+
