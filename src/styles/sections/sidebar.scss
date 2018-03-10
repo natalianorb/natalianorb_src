@@ -59,6 +59,10 @@
 		color: $blue;
 	}
 
+	&:before {
+		margin: 0 5px 0 0;
+	}
+
 	@include tablets {
 		padding: rem(12px) 0;
 	}

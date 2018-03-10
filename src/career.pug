@@ -1,0 +1,43 @@
+- var navLinks = [{ href: "about.html", name: 'Обо мне', classes: 'nav__link nav__link_female'},{ href: 'career.html', name: 'Карьерный путь', classes: 'nav__link nav__link_rocket', isActive: true },{ href: 'portfolio.html', name: 'Портфолио', classes: 'nav__link nav__link_briefcase' }];
+doctype html
+html
+	include includes/_head.pug
+	+head('Обо мне')
+	body
+		div.wrapper
+			div.maincontent
+				include includes/_header.pug
+				div.content
+					div.container
+						include includes/_sidebar.pug
+						+sidebar(navLinks)
+						main.career
+							h1.title Карьерный путь
+							div.career__wrap
+								div.career__left
+									div.career__pics
+										img.about__img(src='../images/avatar220px.png')
+								div.career__right
+									ul.career__list
+										li.career__item
+											a.career__block(href='http://besttoolbars.net/')
+												div.career__year 2017
+												div.career__description
+													div.career__title BestToolbars
+													div.career__position Front-end developer
+													div.career__period март 2017 - по настоящее время
+										li.career__item
+											a.career__block(href='http://childrenscience.ru/')
+												div.career__year 2016
+												div.career__description
+													div.career__title Дети и наука
+													div.career__position Верстальщик
+													div.career__period 2016 декабрь - февраль 2017
+										li.career__item
+											a.career__block(href='http://begu.ru/')
+												div.career__year 2016
+												div.career__description
+													div.career__title Контент-маркет
+													div.career__position Верстальщик
+													div.career__period 2016 сентябрь - декабрь
+			include includes/_footer.pug

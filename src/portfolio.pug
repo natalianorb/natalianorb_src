@@ -1,0 +1,59 @@
+- var navLinks = [{ href: "about.html", name: 'Обо мне', classes: 'nav__link nav__link_female' },{ href: 'career.html', name: 'Карьерный путь', classes: 'nav__link nav__link_rocket' },{ href: 'portfolio.html', name: 'Портфолио', classes: 'nav__link nav__link_briefcase', isActive: true }];
+doctype html
+html
+	include includes/_head.pug
+	+head('Обо мне')
+	body
+	div.wrapper
+		div.maincontent
+			include includes/_header.pug
+			div.content
+				div.container
+					include includes/_sidebar.pug
+					+sidebar(navLinks)
+					main.portfolio
+						h1.title Портфолио
+						p.portfolio__description Ниже вы видите блоки с кратким описанием работ. Каждый блок является ссылкой на саму работу.
+							ul.cases
+								li.cases__item
+									a.cases__link(href="https://natalianorb.github.io/hipsweet/" target="_blank")
+										div.cases__img-wrap
+											img.cases__img(src="../images/portfolio/cake2.png")
+										div.cases__info
+											div.cases__title Hipsweet
+											div.cases__desc Верстка с использованием sass, написаны свои скрипты
+											div.cases__type
+												i.cases__icon.fa.fa-desktop(aria-hidden="true")
+												span Лендинг
+								li.cases__item
+									a.cases__link(href="http://sch-int.ru/intensive/winter2017/index.html" target="_blank")
+										div.cases__img-wrap
+											img.cases__img(src="../images/portfolio/winterschool.png")
+										div.cases__info
+											div.cases__title Intensive courses at Cyprus
+											div.cases__desc Адаптивная верстка с использованием jade, sass
+											div.cases__type
+												i.cases__icon.fa.fa-desktop(aria-hidden="true")
+												span Сайт
+								li.cases__item
+									a.cases__link(href="https://natalianorb.github.io/pest/" target="_blank")
+										div.cases__img-wrap
+											img.cases__img(src="../images/portfolio/pest.png")
+										div.cases__info
+											div.cases__title Pest
+											div.cases__desc Pixel-perfect верстка + скрипт вкладок
+											div.cases__type
+												i.cases__icon.fa.fa-desktop(aria-hidden="true")
+												span Лендинг
+								li.cases__item
+									a.cases__link(href="https://chrome.google.com/webstore/detail/gynny/mmfacohfejckgaapnpnijldogabhacpg" target="_blank")
+										div.cases__img-wrap
+											img.cases__img(src="../images/portfolio/gynny.png")
+										div.cases__info
+											div.cases__title Gynny Button
+											div.cases__desc Кроссбраузерный плагин на Handlebars, LESS, Backbone
+											div.cases__type
+												i.cases__icon.fa.fa-desktop(aria-hidden="true")
+												span Desktop browser add-on
+
+		include includes/_footer.pug

@@ -58,9 +58,10 @@
 
 .about__description {
 	width: 100%;
-	height: rem(280px);
+	height: 60vh;
 	overflow: auto;
 	margin: 0 auto rem(20px);
+	padding: 0 5px 0 0;
 	p {
 		margin: 0 auto rem(10px);
 		color: #646464;

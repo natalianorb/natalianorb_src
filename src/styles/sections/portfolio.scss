@@ -61,7 +61,8 @@
 
 .cases__img {
 	display: block;
-	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
 }
 
 .cases__info {
@@ -86,4 +87,8 @@
 	margin: 0;
 	font: 700 rem(14px)  FiraSans, sans-serif;
 	color:  #aeaeae;
+}
+
+.cases__icon {
+	margin: 0 5px 0 0;
 }
